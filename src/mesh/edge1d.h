@@ -1,5 +1,5 @@
 /*
- * edge.h
+ * edge1d.h
  *
  * This file is part of cpplanes, a software distributed under the MIT license.
  * For any question, please contact one of the authors cited below.
@@ -26,28 +26,21 @@
 #include <vector>
 
 #include "../types.h"
+#include "edge.h"
 
 namespace cpplanes {
 
-	template <int _DIMENSION, int _NB_NODES>
-	class Edge {
-	private:
-		real_t length;
-
-	protected:
-		const std::vector<int> nodes_id;
-		const std::vector<std::vector<real_t>> nodes_coords;
-		const int dimension = _DIMENSION;
-		const int nb_nodes = _NB_NODES;
-
+	class Edge1D: public Edge<1, 1> {
 	public:
-		Edge(
+		Edge1D(
 			std::vector<int> nodes_id,
 			std::vector<std::vector<real_t>> nodes_coords
 		);
 
-		virtual real_t get_length();
+		inline virtual real_t get_length() override { return 0; }
 	};
 
 }
+
+
 

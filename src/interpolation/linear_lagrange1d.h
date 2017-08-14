@@ -28,6 +28,7 @@
 #include "linear_lagrange.h"
 #include "../types.h"
 #include "../integration/integration_scheme.h"
+#include "../mesh/mesh1d.h"
 
 using namespace Eigen;
 using cpplanes::Matrix2r;

@@ -21,9 +21,9 @@
  *
  */
 
-#include "element.h"
-
 #include <cmath>
+
+#include "element.h"
 
 namespace cpplanes {
 
@@ -31,19 +31,6 @@ namespace cpplanes {
 	Element<_DIM, _NB_N>::Element(std::vector<int> nodes_id,
 		std::vector<std::vector<real_t>> nodes_coords):
 		nodes_id(nodes_id), nodes_coords(nodes_coords) {}
-
-	Element1D::Element1D(
-		std::vector<int> nodes_id,
-		std::vector<std::vector<real_t>> nodes_coords
-	): Element(nodes_id, nodes_coords) {
-		// TODO: check vectors' size
-	}
-
-	real_t Element1D::get_length() {
-		return static_cast<real_t>(
-				std::abs(nodes_coords[0][0] - nodes_coords[1][0])
-			);
-	}
 
 }
 

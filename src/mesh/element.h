@@ -44,13 +44,5 @@ namespace cpplanes {
 
 	};
 
-	class Element1D : public Element<1, 2> {
-	private:
-		real_t length;
-	public:
-		Element1D(std::vector<int> nodes_id, std::vector<std::vector<real_t>> nodes_coords);
-
-		real_t get_length();
-	};
-
 }
+

@@ -24,6 +24,8 @@
 #pragma once
 
 #include "base_mesh.h"
+#include "element1d.h"
+#include "edge1d.h"
 
 namespace cpplanes {
 
